@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  swaggerapi:
+    image: swaggerapi/swagger-editor
+    volumes:
+      - ./:/tmp/
+    environment:
+      - "SWAGGER_FILE=/tmp/openapi.json"
+    ports:
+      - "8080:8080"
