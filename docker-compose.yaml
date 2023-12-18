@@ -2,10 +2,12 @@ version: '3.8'
 
 services:
   swaggerapi:
-    image: swaggerapi/swagger-editor
+    image: swaggerapi/swagger-editor:next-v5-unprivileged
+    #image: swaggerapi/swagger-editor
+    # platform: linux/amd64
     volumes:
       - ./:/tmp/
     environment:
       - "SWAGGER_FILE=/tmp/openapi.json"
     ports:
-      - "8080:8080"
+      - "50080:8080"
